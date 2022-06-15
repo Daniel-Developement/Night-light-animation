@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.night{
+    width: 100vw;
+    height: 100vh;
+    background: url(../img/fundo.png);
+    background-size: cover;
+}
+
+.survace{
+    height: 140px;
+    width: 500%;
+    background: url(../img/terreno.png);
+    display: block;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    background-repeat: repeat-x;
+    animation: moveRight 6s infinite linear;
+}
+
+.car{
+    position: absolute;
+    bottom: 6.8%;
+    left: 14%;
+    animation: suspension 1s infinite linear;
+}
+
+/* Animation */
+@keyframes moveRight{
+    100%{
+        transform: translateX(-2950px);
+    }
+}
+
+@keyframes suspension {
+    0%{
+        transform: translateY(-1px);
+    }
+
+    50%{
+        transform: translateY(2px);
+    }
+
+    100%{
+        transform: translateY(-1px);
+    }
+}
